@@ -1,14 +1,12 @@
 const appManagerObj = window.oipfObjectFactory.createApplicationManagerObject();
 
-for(const key in appManagerObj) {
-    console.log(key);
+dispatchEvent(new Event('lowmemory'));
+dispatchEvent(new Event('LowMemory'));
+
+appManagerObj.onlowmemory = function() {
+    console.log('onlowmemory() called');
 }
 
-console.log('----------------------------');
-
-const appClass = appManagerObj.getOwnerApplication(document);
-console.log(appManagerObj.getOwnerApplication());
-
-for(const key in appClass) {
-    console.log(key);
+appManagerObj.onLowMemory = function() {
+    console.log('onLowMemory() called');
 }
