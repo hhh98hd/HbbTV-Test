@@ -1,5 +1,5 @@
-// const appManagerObj = window.oipfObjectFactory.createApplicationManagerObject();
-const appManagerObj = document.getElementById('oipf-app-manager');
+const appManagerObj = window.oipfObjectFactory.createApplicationManagerObject();
+// const appManagerObj = document.getElementById('oipf-app-manager');
 
 for(const key in appManagerObj) {
     console.log(key);
