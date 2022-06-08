@@ -7,6 +7,6 @@ for(const key in appManagerObj) {
 console.log('----------------------------');
 
 const appClass = appManagerObj.getOwnerApplication(window.document);
-for(const key in appManagerObj) {
+for(const key in appClass) {
     console.log(key)
 }
